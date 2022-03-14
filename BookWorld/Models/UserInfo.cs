@@ -25,11 +25,11 @@ namespace BookWorld.Models
         [DataType(DataType.Password)]
         public string UserPassword { get; set; }
 
-        [Display(Name = "Re-enter Password")]
+        [Display(Name = "RePassword")]
         [Required(ErrorMessage = "This feild is required")]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Password doesn't match, try again!")]
-        public string RePassword { get; set; }
-        
+        [Compare("UserPassword", ErrorMessage = "Confirm password doesn't match, try again!")]
+        public string ReUserPassword { get; set; }
+
     }
 }
